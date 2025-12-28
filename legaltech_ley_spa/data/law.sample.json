@@ -1,0 +1,189 @@
+{
+  "id": "LAW_SAMPLE",
+  "nombre": "TUO Ley 29090 (MVP DEMO — reemplazar con tu resumen)",
+  "version": "sample-2025-12-28",
+  "fuente_url": "https://www.gob.pe/ (reemplazar por el enlace oficial específico a TUO/Reglamento)",
+  "fecha_vigencia": "—",
+  "estructura": [
+    {
+      "id": "S_TIT_1",
+      "tipo": "titulo",
+      "numero": "I",
+      "nombre": "Disposiciones generales",
+      "texto_resumen": "Resumen operativo (DEMO): define objeto, ámbito, definiciones y principios. Reemplaza este texto con tu síntesis y coloca source_url hacia la fuente oficial.",
+      "source_url": "https://www.gob.pe/ (enlace a título I)",
+      "children": [
+        {
+          "id": "S_CAP_1",
+          "tipo": "capitulo",
+          "numero": "1",
+          "nombre": "Definiciones y alcance",
+          "texto_resumen": "Resumen operativo (DEMO): definiciones clave para interpretar modalidades y requisitos. Usa esto para poblar el glosario y la lógica del wizard.",
+          "source_url": "https://www.gob.pe/ (enlace a capítulo/artículos)",
+          "children": [
+            {
+              "id": "S_ART_1",
+              "tipo": "articulo",
+              "numero": "1",
+              "nombre": "Objeto de la norma",
+              "texto_resumen": "Resumen operativo (DEMO): qué regula y para qué sirve; define el marco para licencias/habilitaciones y las competencias.",
+              "source_url": "https://www.gob.pe/ (enlace al artículo 1)",
+              "children": [],
+              "requisitos": []
+            }
+          ],
+          "requisitos": []
+        }
+      ],
+      "requisitos": []
+    },
+    {
+      "id": "S_TIT_2",
+      "tipo": "titulo",
+      "numero": "II",
+      "nombre": "Procedimientos y modalidades",
+      "texto_resumen": "Resumen operativo (DEMO): organiza el trámite por modalidades y responsabilidades. En el MVP modela requisitos por modalidad y etapas.",
+      "source_url": "https://www.gob.pe/ (enlace a título II)",
+      "children": [
+        {
+          "id": "S_ART_MOD",
+          "tipo": "articulo",
+          "numero": "—",
+          "nombre": "Modalidades y requisitos (DEMO)",
+          "texto_resumen": "Resumen operativo (DEMO): describe las modalidades A–D y sus diferencias. Aquí se adjunta un set mínimo de requisitos de ejemplo para probar el checklist.",
+          "source_url": "https://www.gob.pe/ (enlace al artículo de modalidades)",
+          "children": [],
+          "requisitos": [
+            {
+              "id": "REQ_001",
+              "nombre": "Formulario Único (FUE/FUH) (DEMO)",
+              "descripcion": "Ejemplo: formulario de solicitud y declaración de datos básicos del expediente.",
+              "obligatorio": true,
+              "entidad": "Municipalidad",
+              "responsable_tipo": "propietario/administrado",
+              "entradas": [
+                {
+                  "key": "n_exp",
+                  "label": "N° de expediente",
+                  "type": "text",
+                  "options": [],
+                  "required": false
+                },
+                {
+                  "key": "fecha",
+                  "label": "Fecha",
+                  "type": "date",
+                  "options": [],
+                  "required": false
+                }
+              ],
+              "evidencias": [
+                {
+                  "nombre": "Formulario firmado",
+                  "formato": "pdf/jpg",
+                  "descripcion": "Documento escaneado."
+                }
+              ],
+              "plazo_estimado_dias": 1,
+              "costo_estimado": "—",
+              "base_legal_ref": "S_ART_MOD"
+            },
+            {
+              "id": "REQ_002",
+              "nombre": "Plano de ubicación y localización (DEMO)",
+              "descripcion": "Ejemplo: plano referenciado al entorno urbano según estándar municipal.",
+              "obligatorio": true,
+              "entidad": "Municipalidad / Catastro",
+              "responsable_tipo": "arquitecto",
+              "entradas": [
+                {
+                  "key": "escala",
+                  "label": "Escala",
+                  "type": "select",
+                  "options": [
+                    "1/500",
+                    "1/1000",
+                    "1/2000"
+                  ],
+                  "required": true
+                }
+              ],
+              "evidencias": [
+                {
+                  "nombre": "Plano (PDF)",
+                  "formato": "pdf",
+                  "descripcion": "Archivo firmado."
+                }
+              ],
+              "plazo_estimado_dias": 3,
+              "costo_estimado": "—",
+              "base_legal_ref": "S_ART_MOD"
+            },
+            {
+              "id": "REQ_003",
+              "nombre": "Memoria descriptiva (DEMO)",
+              "descripcion": "Ejemplo: sustento técnico del proyecto, alcances y especificaciones.",
+              "obligatorio": true,
+              "entidad": "Municipalidad",
+              "responsable_tipo": "arquitecto",
+              "entradas": [
+                {
+                  "key": "version",
+                  "label": "Versión",
+                  "type": "text",
+                  "options": [],
+                  "required": false
+                }
+              ],
+              "evidencias": [
+                {
+                  "nombre": "Memoria (PDF)",
+                  "formato": "pdf",
+                  "descripcion": "Documento firmado."
+                }
+              ],
+              "plazo_estimado_dias": 2,
+              "costo_estimado": "—",
+              "base_legal_ref": "S_ART_MOD"
+            },
+            {
+              "id": "REQ_004",
+              "nombre": "Pago de derecho de trámite (DEMO)",
+              "descripcion": "Ejemplo: comprobante de pago (cuando corresponda).",
+              "obligatorio": false,
+              "entidad": "Municipalidad",
+              "responsable_tipo": "propietario/administrado",
+              "entradas": [
+                {
+                  "key": "monto",
+                  "label": "Monto (S/)",
+                  "type": "number",
+                  "options": [],
+                  "required": false
+                },
+                {
+                  "key": "comprobante",
+                  "label": "N° comprobante",
+                  "type": "text",
+                  "options": [],
+                  "required": false
+                }
+              ],
+              "evidencias": [
+                {
+                  "nombre": "Voucher",
+                  "formato": "pdf/jpg",
+                  "descripcion": "Comprobante."
+                }
+              ],
+              "plazo_estimado_dias": 1,
+              "costo_estimado": "—",
+              "base_legal_ref": "S_ART_MOD"
+            }
+          ]
+        }
+      ],
+      "requisitos": []
+    }
+  ]
+}
